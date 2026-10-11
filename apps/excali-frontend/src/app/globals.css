@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes draw {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes cursor-float-1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(20px, -15px); }
+  50% { transform: translate(-10px, 10px); }
+  75% { transform: translate(15px, 20px); }
+}
+
+@keyframes cursor-float-2 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-25px, 15px); }
+  50% { transform: translate(20px, -20px); }
+  75% { transform: translate(-15px, -10px); }
+}
+
+@keyframes cursor-float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(15px, 25px); }
+  50% { transform: translate(-20px, -15px); }
+  75% { transform: translate(10px, -25px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes float-planet {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.animate-fade-in { animation: fade-in 0.2s ease-out; }
+.animate-scale-in { animation: scale-in 0.25s ease-out; }
+
+.animate-draw,
+.animate-draw-delayed,
+.animate-draw-delayed-2,
+.animate-draw-delayed-3,
+.animate-draw-delayed-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2.5s ease-out forwards;
+}
+
+.animate-draw { animation-delay: 0.3s; }
+.animate-draw-delayed { animation-delay: 0.6s; }
+.animate-draw-delayed-2 { animation-delay: 0.9s; }
+.animate-draw-delayed-3 { animation-delay: 1.2s; }
+.animate-draw-delayed-4 { animation-delay: 1.5s; }
+
+.animate-cursor-1 { animation: cursor-float-1 6s ease-in-out infinite; }
+.animate-cursor-2 { animation: cursor-float-2 7s ease-in-out infinite; }
+.animate-cursor-3 { animation: cursor-float-3 8s ease-in-out infinite; }
+
+.animate-twinkle { animation: twinkle 4s ease-in-out infinite; }
+.animate-float-planet { animation: float-planet 8s ease-in-out infinite; }
+.animate-drift { animation: drift 10s ease-in-out infinite; }
+
+html { scroll-behavior: smooth; }
+

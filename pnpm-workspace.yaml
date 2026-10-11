@@ -4,4 +4,8 @@ packages:
 
 allowBuilds:
   "@parcel/watcher": true
+  '@prisma/engines': false
+  bcrypt: false
   "pnpm": true
+  prisma: false
+  unrs-resolver: false
